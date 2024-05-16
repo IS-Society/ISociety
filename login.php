@@ -176,9 +176,9 @@ if (isset($_POST['submit'])) {
             </div>
 
             <div style='text-align: right;'>
-                <p><a style='text-decoration: underline; color: #FFC94A; font-weight: 600;' href="lupa_password.html">Lupa Password</a></p><br>          
+                <p><a style='text-decoration: underline; color: #FFC94A; font-weight: 600;' href="lupapassword.php">Forgot Password</a></p><br>          
             </div>
-            <p class="login-register-text">Anda belum punya akun? <a href="register.php">Register</a></p>
+            <p class="login-register-text">Belum Aktivasi Akun?<a href="register.php">Aktivasi</a></p>
         </form>
     </div>
     <script>
