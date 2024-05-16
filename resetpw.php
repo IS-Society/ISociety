@@ -145,10 +145,10 @@ include 'config.php';
         <form action="" method="POST" class="login-email">
             <p class="login-text" style="font-size: 2rem; font-weight: 700;">Reset Password</p>
             <div class="input-group">
-                <input type="password" placeholder="Password" name="password" value="" required>
+                <input type="password" placeholder="New Password" name="password" value="" required>
             </div>
             <div class="input-group">
-                <input type="password" placeholder="Confirm Password" name="password" value="" required>
+                <input type="password" placeholder="Confirm New Password" name="password" value="" required>
             </div>
             <div class="input-group">
                 <button name="submit" class="btn">Reset Password</button>
