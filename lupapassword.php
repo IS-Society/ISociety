@@ -168,7 +168,7 @@ body {
                 <input type="email" placeholder="Email" name="email" value="" required>
             </div>
             <div class="input-group">
-                <button name="submit" class="btn">Forgot Password</button>
+                <button name="submit" class="btn">Reset Password</button>
             </div>
         </form>
     </div>
