@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>IS Society - Profil Pengguna</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/logo2.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f5f5f5;
+      color: #333333;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .profile-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-top: 100px;
+      text-align: center;
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .profile-header img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      border: 4px solid #ffc107;
+      transition: transform 0.3s;
+    }
+
+    .profile-header img:hover {
+      transform: scale(1.1);
+    }
+
+    .profile-info {
+      margin-top: 20px;
+    }
+
+    .profile-info h1 {
+      font-size: 28px;
+      margin: 0;
+      color: #333333;
+    }
+
+    .profile-info p {
+      font-size: 16px;
+      color: #666666;
+      margin: 5px 0;
+    }
+
+    .profile-details {
+      text-align: left;
+      margin-top: 30px;
+    }
+
+    .profile-section {
+      margin-bottom: 30px;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #fafafa;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-section h2 {
+      font-size: 20px;
+      color: #333333;
+      border-bottom: 2px solid #ffc107;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-section p,
+    .profile-section ul {
+      font-size: 16px;
+      color: #666666;
+      margin: 10px 0;
+    }
+
+    .profile-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .profile-section ul li {
+      padding: 5px 0;
+    }
+
+    .profile-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .profile-actions button {
+      background: #ffc107;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      margin: 0 5px;
+      transition: background-color 0.3s;
+    }
+
+    .profile-actions button:hover {
+      background: #e0a800;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .social-media a {
+      display: flex;
+      align-items: center;
+      color: #333333;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-media a:hover {
+      color: #ffc107;
+    }
+
+    .social-media i {
+      font-size: 24px;
+      margin-right: 5px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .form-group input[type="file"] {
+      padding: 3px;
+    }
+
+    button[type="submit"] {
+      background: #ffc107;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    button[type="submit"]:hover {
+      background: #e0a800;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+      <a href="index.html" class="logo me-auto"><img src="img/logo.png" alt="" class="img-fluid"></a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="services.html">Layanan</a></li>
+          <li><a href="portfolio.html">Portofolio</a></li>
+          <li><a href="team.html">Tim</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+          <li><a class="active" href="profil.html">Profil</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= Main ======= -->
+  <main id="main">
+    <section id="profile" class="profile-container">
+      <div class="profile-header">
+        <img src="img/pp.jpg" alt="Foto Profil">
+        <div class="profile-info">
+          <h1>Ayu Dian</h1>
+          <p class="profile-role">Alumni</p>
+          <div class="social-media">
+            <a href="https://linkedin.com/in/ayudian" target="_blank"><i class="bi bi-linkedin"></i> Ayu Dian</a>
+            <a href="https://github.com/ayudian" target="_blank"><i class="bi bi-github"></i> ayudian</a>
+            <a href="mailto:ayu@example.com"><i class="bi bi-envelope"></i> ayu@example.com</a>
+            <a href="https://instagram.com/ayuu" target="_blank"><i class="bi bi-instagram"></i> @ayuu</a>
+          </div>
+        </div>
+      </div>
+      <div class="profile-details">
+        <div class="profile-section">
+          <h2>Bio</h2>
+          <p>Deskripsi tentang Ayu Dian.</p>
+        </div>
+        <div class="profile-section">
+          <h2>Program Studi dan Tahun Masuk</h2>
+          <p>Information Systems, 2020</p>
+        </div>
+        <div class="profile-section">
+          <h2>Organisasi</h2>
+          <p>Organisasi yang diikuti oleh Ayu Dian.</p>
+        </div>
+        <div class="profile-section">
+          <h2>Prestasi</h2>
+          <p>Prestasi yang dicapai oleh Ayu Dian.</p>
+        </div>
+        <div class="profile-section">
+          <h2>Karir</h2>
+          <p>Posisi dan tempat kerja saat ini.</p>
+        </div>
+      </div>
+      <div class="profile-actions">
+        <button onclick="editProfile()">Edit Profil</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; 2024 <strong><span>IS Society</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="#">YourCompany</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    function editProfile() {
+      // Kode untuk mengarahkan pengguna ke halaman edit profil
+      window.location.href = 'edit-profil.html';
+    }
+
+    function logout() {
+      // Kode untuk logout
+      window.location.href = 'logout.php';
+    }
+  </script>
+</body>
+</html>

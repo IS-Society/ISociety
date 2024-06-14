@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>IS Society - Edit Profil</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/logo2.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f5f5f5;
+      color: #333333;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .edit-profile-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-top: 100px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .form-group input[type="file"] {
+      padding: 3px;
+    }
+
+    button[type="submit"] {
+      background: #ffc107;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    button[type="submit"]:hover {
+      background: #e0a800;
+    }
+
+    .profile-picture {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-picture img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      border: 3px solid #ffc107;
+    }
+
+    /* Updated Title Style */
+    .edit-profile-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #333333;
+      font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+      font-weight: 600; /* Ketebalan huruf yang lebih menonjol */
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="main">
+    <section id="edit-profile" class="edit-profile-container">
+      <h2 class="edit-profile-title">Ubah Profil</h2>
+      <form id="edit-profile-form">
+        <div class="form-group">
+          <label for="profile-picture">Foto Profil</label>
+          <div class="profile-picture">
+            <img src="img/pp.jpg" alt="Foto Profil">
+            <input type="file" id="profile-picture" name="profile-picture">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="name">Nama</label>
+          <input type="text" id="name" name="name" value="Ayu Dian">
+        </div>
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select id="status" name="status" onchange="toggleFields()">
+            <option value="mahasiswa">Mahasiswa</option>
+            <option value="alumni">Alumni</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="linkedin">LinkedIn</label>
+          <input type="url" id="linkedin" name="linkedin" value="https://linkedin.com/in/ayudian">
+        </div>
+        <div class="form-group">
+          <label for="github">GitHub</label>
+          <input type="url" id="github" name="github" value="https://github.com/ayudian">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" value="ayu@example.com">
+        </div>
+        <div class="form-group">
+          <label for="instagram">Instagram</label>
+          <input type="url" id="instagram" name="instagram" value="https://instagram.com/ayuu">
+        </div>
+        <div class="form-group">
+          <label for="bio">Bio</label>
+          <textarea id="bio" name="bio" rows="3">Deskripsi tentang Ayu Dian.</textarea>
+        </div>
+        <div class="form-group">
+          <label for="program-studi">Program Studi dan Tahun Masuk</label>
+          <input type="text" id="program-studi" name="program-studi" value="Information Systems, 2020">
+        </div>
+        <div class="form-group">
+          <label for="organisasi">Organisasi</label>
+          <textarea id="organisasi" name="organisasi" rows="3">Organisasi yang diikuti oleh Ayu Dian.</textarea>
+        </div>
+        <div class="form-group" id="minat-bakat-group">
+          <label for="minat-bakat">Minat dan Bakat</label>
+          <textarea id="minat-bakat" name="minat-bakat" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="prestasi">Prestasi</label>
+          <textarea id="prestasi" name="prestasi" rows="3"></textarea>
+        </div>
+        <div class="form-group" id="karir-group">
+          <label for="karir">Karir</label>
+          <textarea id="karir" name="karir" rows="3">Posisi dan tempat kerja saat ini.</textarea>
+        </div>
+        <button type="submit">Simpan Perubahan</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('edit-profile-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Simulasi penyimpanan data
+      alert('Profil berhasil diperbarui!');
+      // Arahkan pengguna kembali ke halaman profil setelah penyimpanan
+      window.location.href = 'profil.html';
+    });
+
+    function toggleFields() {
+      var status = document.getElementById('status').value;
+      var minatBakatGroup = document.getElementById('minat-bakat-group');
+      var karirGroup = document.getElementById('karir-group');
+
+      if (status === 'mahasiswa') {
+        minatBakatGroup.style.display = 'block';
+        karirGroup.style.display = 'none';
+      } else if (status === 'alumni') {
+        minatBakatGroup.style.display = 'none';
+        karirGroup.style.display = 'block';
+      }
+    }
+
+    // Inisialisasi pertama kali
+    window.onload = toggleFields;
+  </script>
+</body>
+</html>
